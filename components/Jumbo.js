@@ -7,12 +7,13 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
+import Image from 'next/image';
 
 const Jumbo = () => {
   return (
-    <Container fluid>
+    <Container fluid className='Jumbo'>
       <Row>
-        <Col md={{ span: 5, offset: 1 }} className='Jumbo-Info'>
+        <Col md={{ span: 4, offset: 2 }} className='Jumbo-Info'>
           <h1 className='Jumbo-Info__title'>
             We Give Your Business an Edge Over Your Competitors!
           </h1>
@@ -29,7 +30,28 @@ const Jumbo = () => {
             Get Started
           </button>
         </Col>
-        <Col md={{ span: 5, offset: 1 }}> shape</Col>
+        <Col md={{ span: 4, offset: -2 }} className='Jumbo-shapes'>
+          <img
+            src='/assets/circle1.png'
+            alt='Picture of the author'
+            className='Jumbo-shapes__img circle1'
+          ></img>
+          <img
+            src='/assets/circle2.png'
+            alt='Picture of the author'
+            className='Jumbo-shapes__img circle2'
+          ></img>
+          <img
+            src='/assets/triangle.png'
+            alt='Picture of the author'
+            className='Jumbo-shapes__img triangle'
+          ></img>
+          <img
+            src='/assets/video.png'
+            alt='Picture of the author'
+            className='Jumbo-shapes__img video'
+          ></img>
+        </Col>
       </Row>
     </Container>
   );

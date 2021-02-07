@@ -1,6 +1,6 @@
 .Header {
   box-shadow: 0px 0.2rem 0.2rem 0px rgba(#000000, 0.25);
-
+  background-color: $color-white;
   &__logo {
     font-weight: 700;
     font-size: 1.5rem !important;
@@ -17,46 +17,94 @@
   }
 }
 
-.Home {
-  background-color: $color-theme;
-}
+.Jumbo {
+  margin-top: 2rem;
+  .Jumbo-Info {
+    padding: 1rem 0;
+    @include respond(phone) {
+      padding: 0.5rem 0.7rem;
+    }
 
-.Jumbo-Info {
-  padding: 1rem 0;
+    &__title {
+      font-family: $second-font;
+      font-size: 5.2rem;
+    }
+    &__subtext {
+      font-family: $main-font;
+      color: #7c828d;
+      font-size: 2.2rem;
+    }
 
-  &__title {
-    font-family: $second-font;
-    font-size: 5.2rem;
+    &__input {
+      display: block;
+      background: #ffffff;
+      box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
+      padding: 0.1rem 0.1rem;
+      border-radius: 0.4rem;
+      padding: 0.8rem 0.2rem;
+      text-align: center;
+      margin: 1rem 0;
+      width: 80%;
+      border: none;
+    }
+
+    &__button {
+      background: #7e53fd !important;
+      font-family: $main-font;
+      color: $color-white;
+      padding: 0.8rem 0.1rem;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 0.25rem;
+      width: 40%;
+      font-size: 1.2rem;
+      box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
+    }
   }
-  &__subtext {
-    font-family: $main-font;
-    color: #7c828d;
-    font-size: 2.2rem;
-  }
 
-  &__input {
-    display: block;
-    background: #ffffff;
-    box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
-    padding: 0.1rem 0.1rem;
-    border-radius: 0.4rem;
-    padding: 0.8rem 0.2rem;
-    text-align: center;
-    margin: 1rem 0;
-    width: 80%;
-    border: none;
-  }
+  .Jumbo-shapes {
+    position: relative;
+    height: 80vh;
 
-  &__button {
-    background: #7e53fd !important;
-    font-family: $main-font;
-    color: $color-white;
-    padding: 0.8rem 0.1rem;
-    margin: 1rem 0;
-    border: none;
-    border-radius: 0.25rem;
-    width: 40%;
-    font-size: 1.2rem;
-    box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
+    &__img {
+      position: absolute !important;
+    }
+    .triangle {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      z-index: 2 !important;
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+    .circle1 {
+      top: 25% !important;
+      left: 35% !important;
+      transform: translate(-35%, -25%);
+      z-index: 1 !important;
+      @include respond(phone) {
+        width: 40%;
+      }
+    }
+    .circle2 {
+      bottom: 25% !important;
+      right: 0 !important;
+      transform: translate(25%, 25%);
+      z-index: 1 !important;
+      @include respond(phone) {
+        width: 40%;
+        right: 10% !important;
+      }
+    }
+    .video {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      z-index: 3 !important;
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
   }
 }

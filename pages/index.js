@@ -6,12 +6,11 @@ import Jumbo from '../components/Jumbo';
 export default function Home() {
   return (
     <Fragment>
-      <Head>
-        <title>87Lux</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <div className='Home'>
+        <Head>
+          <title>87Lux</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
         <Jumbo></Jumbo>
       </div>
     </Fragment>
