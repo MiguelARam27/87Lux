@@ -1,26 +1,23 @@
 import React from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  InputGroup,
-  FormControl,
-  Button,
-} from 'react-bootstrap';
-import Image from 'next/image';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Jumbo = () => {
   return (
     <Container fluid className='Jumbo'>
       <Row>
-        <Col md={{ span: 4, offset: 2 }} className='Jumbo-Info'>
+        <Col
+          sm={{ span: 6 }}
+          md={{ span: 4, offset: 2 }}
+          lg={{ span: 4, offset: 2 }}
+          className='Jumbo-Info'
+        >
           <h1 className='Jumbo-Info__title'>
             We Give Your Business an Edge Over Your Competitors!
           </h1>
-          <span className='Jumbo-Info__subtext'>
+          <h2 className='Jumbo-Info__subtext'>
             Everything you need for your business: Themes, Apps, Assets and
             More..
-          </span>
+          </h2>
           <input
             type='email'
             className='Jumbo-Info__input'
@@ -30,27 +27,32 @@ const Jumbo = () => {
             Get Started
           </button>
         </Col>
-        <Col md={{ span: 4, offset: -2 }} className='Jumbo-shapes'>
+        <Col
+          sm={{ span: 6 }}
+          md={{ span: 4, offset: -2 }}
+          lg={{ span: 4, offset: -2 }}
+          className='Jumbo-shapes'
+        >
           <img
-            src='/assets/circle1.png'
+            src='/assets/jumbo/circle1.png'
             alt='Picture of the author'
             className='Jumbo-shapes__img circle1'
-          ></img>
+          />
           <img
-            src='/assets/circle2.png'
+            src='/assets/jumbo/circle2.png'
             alt='Picture of the author'
             className='Jumbo-shapes__img circle2'
-          ></img>
+          />
           <img
-            src='/assets/triangle.png'
+            src='/assets/jumbo/triangle.png'
             alt='Picture of the author'
             className='Jumbo-shapes__img triangle'
-          ></img>
+          />
           <img
-            src='/assets/video.png'
+            src='/assets/jumbo/video.png'
             alt='Picture of the author'
             className='Jumbo-shapes__img video'
-          ></img>
+          />
         </Col>
       </Row>
     </Container>

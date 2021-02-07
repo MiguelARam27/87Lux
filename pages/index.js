@@ -2,6 +2,7 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Fragment } from 'react';
 import Jumbo from '../components/Jumbo';
+import Platforms from '../components/Platforms';
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
           <title>87Lux</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <Jumbo></Jumbo>
+        <Jumbo />
+        <Platforms />
       </div>
     </Fragment>
   );

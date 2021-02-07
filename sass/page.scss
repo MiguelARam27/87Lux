@@ -19,20 +19,25 @@
 
 .Jumbo {
   margin-top: 2rem;
-  .Jumbo-Info {
+  @include respond(phone) {
     padding: 1rem 0;
+  }
+  .Jumbo-Info {
+    padding: 13rem 0;
     @include respond(phone) {
       padding: 0.5rem 0.7rem;
     }
 
     &__title {
       font-family: $second-font;
-      font-size: 5.2rem;
+      font-size: 4.7rem;
+      margin-bottom: 0.5rem;
     }
     &__subtext {
       font-family: $main-font;
       color: #7c828d;
-      font-size: 2.2rem;
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
     }
 
     &__input {
@@ -41,11 +46,13 @@
       box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
       padding: 0.1rem 0.1rem;
       border-radius: 0.4rem;
-      padding: 0.8rem 0.2rem;
-      text-align: center;
+      padding: 0.8rem 0;
+      padding-left: 0.8rem;
       margin: 1rem 0;
       width: 80%;
       border: none;
+      margin-bottom: 2rem;
+      color: rgba(#b9bec7, 0.1) !important;
     }
 
     &__button {
@@ -74,6 +81,10 @@
       left: 50% !important;
       transform: translate(-50%, -50%);
       z-index: 2 !important;
+      height: 40rem;
+      width: 40rem;
+      object-fit: contain;
+
       @include respond(phone) {
         width: 90%;
       }
@@ -83,18 +94,28 @@
       left: 35% !important;
       transform: translate(-35%, -25%);
       z-index: 1 !important;
+      height: 15rem;
+      width: 15rem;
       @include respond(phone) {
-        width: 40%;
+        height: 8rem;
+        width: 8rem;
+        top: 25% !important;
+        left: 35% !important;
+        transform: translate(-15%, -5%);
       }
     }
     .circle2 {
       bottom: 25% !important;
-      right: 0 !important;
+      right: 5% !important;
       transform: translate(25%, 25%);
       z-index: 1 !important;
+      height: 15rem;
+      width: 15rem;
       @include respond(phone) {
-        width: 40%;
+        height: 8rem;
+        width: 8rem;
         right: 10% !important;
+        transform: translate(25%, 15%);
       }
     }
     .video {
@@ -102,8 +123,36 @@
       left: 50% !important;
       transform: translate(-50%, -50%);
       z-index: 3 !important;
+      object-fit: contain;
       @include respond(phone) {
         width: 90%;
+      }
+    }
+  }
+}
+
+.Platforms {
+  &__container {
+    height: 20vh;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    font-family: $main-font;
+    text-align: center;
+    font-size: 1.75rem;
+    color: #7c828d;
+    text-transform: uppercase;
+  }
+  &__images-container {
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      @include respond(phone) {
+        display: block;
+        margin: auto;
       }
     }
   }
