@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Fragment } from 'react';
 import Jumbo from '../components/Jumbo';
 import Platforms from '../components/Platforms';
+import LatestProjects from '../components/LatestProjects';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         </Head>
         <Jumbo />
         <Platforms />
+        <LatestProjects />
       </div>
     </Fragment>
   );
