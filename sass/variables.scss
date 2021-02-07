@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&display=swap');
-
+@font-face {
+  font-family: League Gothic;
+  src: url('./LeagueGothic-Regular.otf');
+}
 $main-font: 'Open Sans', sans-serif;
+$second-font: 'League Gothic', sans-serif;
 h1 {
   font-family: 'Open Sans', sans-serif;
 }
