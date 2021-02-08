@@ -6,6 +6,7 @@ import Platforms from '../components/Platforms';
 import LatestProjects from '../components/LatestProjects';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
+import Solution from '../components/Solution';
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
       <Jumbo />
       <Platforms />
 
-      {/* <LatestProjects />
-      <Team /> */}
+      {/* <LatestProjects /> */}
+      <Team />
+      <Solution />
       <Footer />
     </Fragment>
   );
