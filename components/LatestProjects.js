@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 const LatestProjects = () => {
   return (
-    <Container fluid>
-      <Row>
+    <Container className='padding-none'>
+      <Row className='padding-none'>
         <Col
-          sm={{ span: 6 }}
-          md={{ span: 10, offset: 2 }}
-          lg={{ span: 10, offset: 2 }}
+          sm={{ span: 12 }}
+          md={{ span: 12 }}
+          lg={{ span: 12 }}
           className='Latest_projects'
         >
           <h1 className='Latest_projects__title'>latest Projects</h1>

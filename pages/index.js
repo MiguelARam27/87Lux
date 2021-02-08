@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import Jumbo from '../components/Jumbo';
 import Platforms from '../components/Platforms';
 import LatestProjects from '../components/LatestProjects';
+import Team from '../components/Team';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
         </Head>
         <Jumbo />
         <Platforms />
+
         <LatestProjects />
+        <Team />
       </div>
     </Fragment>
   );
