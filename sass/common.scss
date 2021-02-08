@@ -31,6 +31,14 @@ body {
     } //1800
   }
 }
-.padding-none {
-  padding: 0 !important;
+//get rid of gutters with row class on mobile
+.margin-none {
+  margin: 0 !important;
+}
+
+//Get rid of button blue glow
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
 }

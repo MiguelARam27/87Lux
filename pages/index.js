@@ -5,21 +5,21 @@ import Jumbo from '../components/Jumbo';
 import Platforms from '../components/Platforms';
 import LatestProjects from '../components/LatestProjects';
 import Team from '../components/Team';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <Fragment>
-      <div className='Home'>
-        <Head>
-          <title>87Lux</title>
-          <link rel='icon' href='/favicon.ico' />
-        </Head>
-        <Jumbo />
-        <Platforms />
+      <Head>
+        <title>87Lux</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Jumbo />
+      <Platforms />
 
-        <LatestProjects />
-        <Team />
-      </div>
+      {/* <LatestProjects />
+      <Team /> */}
+      <Footer />
     </Fragment>
   );
 }

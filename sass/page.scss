@@ -135,22 +135,6 @@
   margin-top: -2rem;
   margin-bottom: 2rem;
 
-  &__container {
-    @include respond(phone) {
-      height: 50vh;
-    }
-  }
-
-  &__images-container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    @include respond(phone) {
-      flex-flow: column;
-      align-items: center;
-    }
-  }
-
   &__title {
     font-family: $main-font;
     text-align: center;
@@ -237,7 +221,7 @@
     }
   }
   .img3 {
-    top: 90%;
+    top: 60%;
     left: 2%;
     transform: translate(-2%, -20%);
     @include respond(phone) {
@@ -289,5 +273,34 @@
       right: 25%;
       transform: translate(-25%, 95%);
     }
+  }
+}
+
+.Footer {
+  height: 50vh;
+  background: #38394f;
+  position: relative;
+
+  &__title {
+    font-size: 2.3rem;
+    color: $color-white;
+    font-style: normal;
+    font-weight: 600;
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+  &__button {
+    background: #7e53fd !important;
+    font-family: $main-font;
+    color: $color-white;
+    padding: 0.8rem 0.1rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.25rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    box-shadow: 0px 12px 42px 1px rgba(0, 0, 0, 0.15);
+    border-color: transparent !important;
   }
 }
