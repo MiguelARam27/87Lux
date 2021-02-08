@@ -161,7 +161,9 @@
     width: 35rem;
   }
 }
-
+.h-20 {
+  height: 20%;
+}
 .Team {
   margin: 2rem 0;
 
@@ -169,12 +171,7 @@
   height: 50vh;
 
   @include respond(phone) {
-    width: 100% !important;
-    height: 80vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
   &__title {
     font-family: $main-font;
@@ -193,10 +190,7 @@
     position: relative;
 
     @include respond(phone) {
-      all: initial;
-      position: relative;
       font-size: 2.3rem;
-      position: relative;
     }
   }
   &__img {
@@ -210,8 +204,6 @@
     top: 0%;
     left: 5%;
     transform: translate(-5%, 0);
-    @include respond(phone) {
-    }
   }
   .img2 {
     top: 10%;
@@ -233,46 +225,43 @@
     }
   }
   .img4 {
-    top: 90%;
-    right: 2%;
-    transform: translate(-2%, -90%);
-    @include respond(phone) {
-      top: 90%;
-      left: 15%;
-      transform: translate(60%, -90%);
-    }
+    bottom: 0%;
+    right: 5%;
+    transform: translate(5%, 0);
   }
   .img5 {
     top: 90%;
     left: 30%;
     transform: translate(-30%, -90%);
-    @include respond(phone) {
-      top: 0%;
-      left: -5%;
-      transform: translate(25%, 55%);
-    }
   }
   .img6 {
     top: 0%;
     right: 20%;
     transform: translate(20%, 0%);
-    @include respond(phone) {
-      top: 80%;
-      right: 0%;
-      left: 25%;
-      transform: translate(65%, -85%);
-    }
   }
   .img7 {
     top: 50%;
     right: 35%;
     transform: translate(20%, 50%);
+  }
+}
 
-    @include respond(phone) {
-      top: 0%;
-      right: 25%;
-      transform: translate(-25%, 95%);
-    }
+.Team-mobile {
+  display: none;
+  @include respond(phone) {
+    display: block;
+    width: 100% !important;
+  }
+
+  height: auto;
+
+  &__title {
+    display: block;
+  }
+  &__img {
+    display: block;
+    height: 200px;
+    width: 200px;
   }
 }
 .Solution {
