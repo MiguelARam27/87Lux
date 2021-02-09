@@ -7,33 +7,59 @@ import {
   FormControl,
   Button,
 } from 'react-bootstrap';
+
+import { motion } from 'framer-motion';
+import {
+  titleAnimation,
+  platformContainerAnimation,
+  image1Animation,
+  image2Animation,
+  image3Animation,
+  image4Animation,
+} from './animation/platformsAnimation';
 const Platforms = () => {
   return (
     <div className='Platforms'>
-      <h2 className='Platforms__title'>Platforms</h2>
+      <motion.h2
+        variants={titleAnimation}
+        initial='hidden'
+        animate='show'
+        className='Platforms__title'
+      >
+        Platforms
+      </motion.h2>
       <div className='container Platforms__container'>
-        <Row className=' justify-content-center align-items-center margin-none'>
-          <img
+        <motion.div
+          variants={platformContainerAnimation}
+          initial='hidden'
+          animate='show'
+          className=' row justify-content-center align-items-center margin-none'
+        >
+          <motion.img
+            variants={image1Animation}
             src='/assets/platforms/big.png'
             alt='Big commerce'
             className='Platforms__img '
           />
-          <img
+          <motion.img
+            variants={image2Animation}
             src='/assets/platforms/shopify.png'
             alt='Shopify'
             className='Platforms__img '
           />
-          <img
+          <motion.img
+            variants={image3Animation}
             src='/assets/platforms/wix.png'
             alt='Wix'
             className='Platforms__img '
           />
-          <img
+          <motion.img
+            variants={image4Animation}
             src='/assets/platforms/wordpress.png'
             alt='Big commerce'
             className='Platforms__img '
           />
-        </Row>
+        </motion.div>
       </div>
     </div>
   );

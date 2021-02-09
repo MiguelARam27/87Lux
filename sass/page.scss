@@ -201,6 +201,12 @@
   margin-top: -2rem;
   margin-bottom: 10rem !important;
 
+  &__container {
+    div {
+      overflow: hidden;
+    }
+  }
+
   &__title {
     font-family: $main-font;
     text-align: center;
