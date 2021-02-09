@@ -9,14 +9,15 @@ import {
   Image,
 } from 'react-bootstrap';
 const LatestProjects = () => {
+  //carousal state
   const [index, setIndex] = useState(0);
 
-  const [img, setImg] = useState('');
+  //modal state
   const [show, setShow] = useState(false);
-
+  const [img, setImg] = useState('');
+  //modal functions
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const onClickHandler = (e) => {
     let imgUrl = e.target.src;
     setImg(imgUrl);

@@ -1,7 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import {
+  jumboInfoChildren,
+  jumboInfoSection,
+  jumboPictureSection,
+  jumboPictureChildren,
+} from './animation/jumboAnimation';
 
 const Jumbo = () => {
+  //click handler to take to youtube link
   const onClickHandler = (e) => {
     e.preventDefault();
     alert('clicked');
@@ -10,35 +18,45 @@ const Jumbo = () => {
   return (
     <Container fluid className='Jumbo'>
       <Row noGutters='true'>
-        <Col
+        <motion.div
           sm={{ span: 10, offset: 1 }}
           md={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 2 }}
           xl={{ span: 4, offset: 2 }}
-          className='Jumbo-Info'
+          className='Jumbo-Info col-xl-4 col-lg-4 col-md-10 col-sm-10 offset-xl-2 offset-lg-2 offset-md-1 offset-sm-1'
+          initial='hidden'
+          animate='show'
+          variants={jumboInfoSection}
         >
-          <h1 className='Jumbo-Info__title'>
+          <motion.h1 variants={jumboInfoChildren} className='Jumbo-Info__title'>
             We Give Your Business an Edge Over Your Competitors!
-          </h1>
-          <h2 className='Jumbo-Info__subtext'>
+          </motion.h1>
+          <motion.h1
+            variants={jumboInfoChildren}
+            className='Jumbo-Info__subtext'
+          >
             Everything you need for your business: Themes, Apps, Assets and
             More..
-          </h2>
-          <input
+          </motion.h1>
+          <motion.input
+            variants={jumboInfoChildren}
             type='email'
             className='Jumbo-Info__input'
             placeholder='Enter your email address'
           />
-          <button href='/' className='Jumbo-Info__button'>
+          <motion.button
+            variants={jumboInfoChildren}
+            href='/'
+            className='Jumbo-Info__button'
+          >
             Get Started
-          </button>
-        </Col>
-        <Col
-          sm={{ span: 10, offset: 1 }}
-          md={{ span: 11 }}
-          lg={{ span: 4, offset: 2 }}
-          xl={{ span: 4, offset: 1 }}
-          className='Jumbo-shapes'
+          </motion.button>
+        </motion.div>
+        <motion.div
+          initial='hidden'
+          animate='show'
+          variants={jumboPictureSection}
+          className='Jumbo-shapes col-xl-4 col-lg-4 col-md-11 col-sm-10 offset-xl-1 offset-lg-2 offset-sm-1'
         >
           <img
             src='/assets/jumbo/circle1.png'
@@ -61,7 +79,7 @@ const Jumbo = () => {
             alt='Picture of the author'
             className='Jumbo-shapes__img video'
           />
-        </Col>
+        </motion.div>
       </Row>
     </Container>
   );
