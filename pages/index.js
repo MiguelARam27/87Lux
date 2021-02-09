@@ -14,7 +14,6 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>87Lux</title>
-        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Jumbo />
       <Platforms />
