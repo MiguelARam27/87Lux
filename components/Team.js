@@ -44,9 +44,8 @@ const Team = () => {
       </Container>
 
       <Container className='Team-mobile'>
+        <h1 className='Team-mobile__title'>Meet The Team</h1>
         <Row className='text-center justify-content-center align-items-center '>
-          <h1 className='Team-mobile__title'>Meet The Team</h1>
-
           <img
             src='/assets/team/Team1.png'
             alt='Big commerce'

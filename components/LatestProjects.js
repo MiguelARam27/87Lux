@@ -1,38 +1,106 @@
-import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import React, { Fragment, useState } from 'react';
+import { Row, Col, Button, Container, Carousel } from 'react-bootstrap';
 const LatestProjects = () => {
-  return (
-    <>
-      <Row className='padding-none' className='Latest_projects'>
-        <Col
-          sm={{ span: 1 }}
-          md={{ span: 12, offset: 1 }}
-          lg={{ span: 11, offset: 2 }}
-          className='Latest_projects__col'
-        >
-          <h1 className='Latest_projects__title'>latest Projects</h1>
-          <img
-            src='/assets/latest_projects/project1.png'
-            alt='project'
-            className='Latest_projects__img img1'
-          />
-          <img
-            src='/assets/latest_projects/project2.png'
-            alt='project'
-            className='Latest_projects__img img2'
-          />
-          <img
-            src='/assets/latest_projects/project3.png'
-            alt='project'
-            className='Latest_projects__img img3'
-          />
-        </Col>
-        {/* <Col sm={{ span: 6 }} md={{ span: 1, offset: 3 }} lg={{ span: 10 }}>
+  const [index, setIndex] = useState(0);
 
-      </Col> */}
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+  return (
+    <Fragment>
+      <Row noGutters={true} className='Projects margin-0'>
+        <Col sm={{ span: 1 }} md={{ span: 1 }} lg={{ span: 1, offset: 1 }}>
+          <div className='title-col'>
+            <h1>Latest Projects</h1>
+          </div>
+        </Col>
+        <Col
+          sm={{ span: 11 }}
+          md={{ span: 11 }}
+          lg={{ span: 10 }}
+          className='black'
+        >
+          <Carousel
+            activeIndex={index}
+            onSelect={handleSelect}
+            touch={true}
+            className='carousel-inner no-padding black '
+          >
+            <Carousel.Item>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+              <div className='col-xs-3 col-sm-3 col-md-3'>
+                <img
+                  className='d-block w-100'
+                  src='/assets/latest_projects/project1.png'
+                  alt='Second slide'
+                />
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </Col>
       </Row>
-      <Container></Container>
-    </>
+      <Container>
+        <Row className='justify-content-center'>
+          <Button href='/' className='Projects__button'>
+            View Themes
+          </Button>
+          <Button href='/' className='Projects__button'>
+            View Apps
+          </Button>
+        </Row>
+      </Container>
+    </Fragment>
   );
 };
 

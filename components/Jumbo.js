@@ -11,7 +11,7 @@ const Jumbo = () => {
     <Container fluid className='Jumbo'>
       <Row noGutters='true'>
         <Col
-          sm={{ span: 6 }}
+          sm={{ span: 10, offset: 1 }}
           md={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 2 }}
           xl={{ span: 4, offset: 1 }}
@@ -34,10 +34,10 @@ const Jumbo = () => {
           </button>
         </Col>
         <Col
-          sm={{ span: 6 }}
+          sm={{ span: 10, offset: 1 }}
           md={{ span: 11 }}
           lg={{ span: 4, offset: 2 }}
-          xl={{ span: 3, offset: -1 }}
+          xl={{ span: 4, offset: 2 }}
           className='Jumbo-shapes'
         >
           <img

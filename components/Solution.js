@@ -8,12 +8,12 @@ const Solution = () => {
           <h1 className='Solution__title '>Need a custom solution?</h1>
         </Row>
 
-        <Row>
+        <Row className='Solution__row'>
           <Col
-            sm={{ span: 1 }}
-            md={{ span: 10, offset: 2 }}
-            lg={{ span: 2, offset: 2 }}
-            className='Solution__container '
+            sm={{ span: 8, offset: 4 }}
+            md={{ span: 4, offset: 5 }}
+            lg={{ span: 3, offset: 1 }}
+            className='Solution__container'
           >
             <div className='Solution__solution'>
               <span className='Solution__number'>01</span>
