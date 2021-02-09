@@ -8,6 +8,7 @@ const Header = () => {
       className='navigation'
       collapseOnSelect
       className='Header'
+      fixed='top'
     >
       <Container>
         <Navbar.Brand href='/' className='Header__logo'>

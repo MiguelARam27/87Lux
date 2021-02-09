@@ -7,7 +7,6 @@ import LatestProjects from '../components/LatestProjects';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
 import Solution from '../components/Solution';
-import Caro from '../components/Caro';
 
 export default function Home() {
   return (

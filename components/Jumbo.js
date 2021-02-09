@@ -14,7 +14,7 @@ const Jumbo = () => {
           sm={{ span: 10, offset: 1 }}
           md={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 2 }}
-          xl={{ span: 4, offset: 1 }}
+          xl={{ span: 4, offset: 2 }}
           className='Jumbo-Info'
         >
           <h1 className='Jumbo-Info__title'>
@@ -37,7 +37,7 @@ const Jumbo = () => {
           sm={{ span: 10, offset: 1 }}
           md={{ span: 11 }}
           lg={{ span: 4, offset: 2 }}
-          xl={{ span: 4, offset: 2 }}
+          xl={{ span: 4, offset: 1 }}
           className='Jumbo-shapes'
         >
           <img

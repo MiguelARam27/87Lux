@@ -4,7 +4,7 @@ const Solution = () => {
   return (
     <>
       <Container fluid className='Solution'>
-        <Row className='justify-content-center align-items-center'>
+        <Row className='justify-content-center align-items-center Solution__title-container'>
           <h1 className='Solution__title '>Need a custom solution?</h1>
         </Row>
 
