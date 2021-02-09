@@ -17,13 +17,16 @@ import {
   image3Animation,
   image4Animation,
 } from './animation/platformsAnimation';
+import { useScroll } from './animation/useScroll';
 const Platforms = () => {
+  const [element, controls] = useScroll();
   return (
     <div className='Platforms'>
       <motion.h2
         variants={titleAnimation}
         initial='hidden'
-        animate='show'
+        ref={element}
+        animate={controls}
         className='Platforms__title'
       >
         Platforms
@@ -32,7 +35,7 @@ const Platforms = () => {
         <motion.div
           variants={platformContainerAnimation}
           initial='hidden'
-          animate='show'
+          animate={controls}
           className=' row justify-content-center align-items-center margin-none'
         >
           <motion.img

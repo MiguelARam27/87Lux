@@ -5,10 +5,10 @@ import {
   jumboInfoChildren,
   jumboInfoSection,
   jumboPictureSection,
-  jumboPictureChildren,
 } from './animation/jumboAnimation';
-
+import { useScroll } from './animation/useScroll';
 const Jumbo = () => {
+  const [element, controls] = useScroll();
   //click handler to take to youtube link
   const onClickHandler = (e) => {
     e.preventDefault();
@@ -19,13 +19,10 @@ const Jumbo = () => {
     <Container fluid className='Jumbo'>
       <Row noGutters='true'>
         <motion.div
-          sm={{ span: 10, offset: 1 }}
-          md={{ span: 10, offset: 1 }}
-          lg={{ span: 4, offset: 2 }}
-          xl={{ span: 4, offset: 2 }}
           className='Jumbo-Info col-xl-4 col-lg-4 col-md-10 col-sm-10 offset-xl-2 offset-lg-2 offset-md-1 offset-sm-1'
           initial='hidden'
-          animate='show'
+          ref={element}
+          animate={controls}
           variants={jumboInfoSection}
         >
           <motion.h1 variants={jumboInfoChildren} className='Jumbo-Info__title'>
@@ -54,7 +51,8 @@ const Jumbo = () => {
         </motion.div>
         <motion.div
           initial='hidden'
-          animate='show'
+          ref={element}
+          animate={controls}
           variants={jumboPictureSection}
           className='Jumbo-shapes col-xl-4 col-lg-4 col-md-11 col-sm-10 offset-xl-1 offset-lg-2 offset-sm-1'
         >

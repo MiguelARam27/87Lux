@@ -8,7 +8,11 @@ import {
   Modal,
   Image,
 } from 'react-bootstrap';
+
+import { useScroll } from './animation/useScroll';
 const LatestProjects = () => {
+  const [element, controls] = useScroll();
+
   //carousal state
   const [index, setIndex] = useState(0);
 
@@ -29,7 +33,7 @@ const LatestProjects = () => {
   };
   return (
     <Fragment>
-      <Row noGutters={true} className='Projects margin-0'>
+      <Row noGutters={true} className='Projects margin-0' ref={element}>
         <Col sm={{ span: 1 }} md={{ span: 1 }} lg={{ span: 1, offset: 1 }}>
           <div className='Projects__title black'>
             <h1>Latest Projects</h1>
