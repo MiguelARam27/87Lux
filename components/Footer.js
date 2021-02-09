@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 const Footer = () => {
   return (
-    <Row className='justify-content-center align-items-center margin-none text-center Footer'>
+    <Row className='justify-content-center align-items-center  text-center Footer'>
       <img
         // src='/assets/latest_projects/project2.png'
         src='/assets/solutions/example.png'

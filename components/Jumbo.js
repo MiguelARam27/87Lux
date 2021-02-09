@@ -2,13 +2,19 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Jumbo = () => {
+  const onClickHandler = (e) => {
+    e.preventDefault();
+    alert('clicked');
+    window.location = 'http://www.youtube.com';
+  };
   return (
     <Container fluid className='Jumbo'>
-      <Row>
+      <Row noGutters='true'>
         <Col
           sm={{ span: 6 }}
-          md={{ span: 4, offset: 2 }}
+          md={{ span: 10, offset: 1 }}
           lg={{ span: 4, offset: 2 }}
+          xl={{ span: 4, offset: 1 }}
           className='Jumbo-Info'
         >
           <h1 className='Jumbo-Info__title'>
@@ -29,8 +35,9 @@ const Jumbo = () => {
         </Col>
         <Col
           sm={{ span: 6 }}
-          md={{ span: 4, offset: -2 }}
-          lg={{ span: 4, offset: -2 }}
+          md={{ span: 11 }}
+          lg={{ span: 4, offset: 2 }}
+          xl={{ span: 3, offset: -1 }}
           className='Jumbo-shapes'
         >
           <img
@@ -49,6 +56,7 @@ const Jumbo = () => {
             className='Jumbo-shapes__img triangle'
           />
           <img
+            onClick={onClickHandler}
             src='/assets/jumbo/video.png'
             alt='Picture of the author'
             className='Jumbo-shapes__img video'

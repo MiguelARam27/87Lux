@@ -16,12 +16,13 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Jumbo />
-      <Platforms />
+      {/* <Platforms />
 
-      {/* <LatestProjects /> */}
+      <LatestProjects />
       <Team />
       <Solution />
-      <Footer />
+      <Footer /> */}
     </Fragment>
   );
 }
+// latest projects need fix mobile tab

@@ -24,6 +24,12 @@
   }
   .Jumbo-Info {
     padding: 13rem 0;
+
+    @include respond(tab-land) {
+      padding: none;
+
+      text-align: center;
+    }
     @include respond(phone) {
       padding: 0.5rem 0.7rem;
     }
@@ -32,6 +38,9 @@
       font-family: $second-font;
       font-size: 4.7rem;
       margin-bottom: 0.5rem;
+      @include respond(tab-land) {
+        font-size: 3.2rem;
+      }
     }
     &__subtext {
       font-family: $main-font;
@@ -53,6 +62,14 @@
       border: none;
       margin-bottom: 2rem;
       color: (#b9bec7) !important;
+      @include respond(tab-land) {
+        text-align: center;
+        width: 90%;
+        margin: 0 1rem;
+      }
+      @include respond(phone) {
+        margin: 0 1rem;
+      }
     }
 
     &__button {
@@ -72,7 +89,7 @@
   .Jumbo-shapes {
     position: relative;
     height: 80vh;
-
+    padding: 13rem 0;
     &__img {
       position: absolute !important;
     }
@@ -85,6 +102,14 @@
       width: 40rem;
       object-fit: contain;
 
+      @include respond(tab-land) {
+        height: 20rem;
+        width: 20rem;
+      }
+      @include respond(tab-port) {
+        height: 30rem;
+        width: 30rem;
+      }
       @include respond(phone) {
         width: 90%;
       }
@@ -96,25 +121,50 @@
       z-index: 1 !important;
       height: 15rem;
       width: 15rem;
+      @include respond(tab-land) {
+        height: 10rem;
+        width: 10rem;
+        top: 35% !important;
+        left: 25% !important;
+      }
+      @include respond(tab-port) {
+        height: 12rem;
+        width: 12rem;
+
+        left: 45% !important;
+      }
       @include respond(phone) {
         height: 8rem;
         width: 8rem;
-        top: 25% !important;
+        top: 30% !important;
         left: 35% !important;
         transform: translate(-15%, -5%);
       }
     }
     .circle2 {
-      bottom: 25% !important;
+      bottom: 15% !important;
       right: 5% !important;
       transform: translate(25%, 25%);
       z-index: 1 !important;
       height: 15rem;
       width: 15rem;
+      @include respond(tab-land) {
+        height: 10rem;
+        width: 10rem;
+        bottom: 30% !important;
+        right: 15% !important;
+      }
+      @include respond(tab-port) {
+        height: 12rem;
+        width: 12rem;
+        right: 15% !important;
+        bottom: 25% !important;
+      }
       @include respond(phone) {
-        height: 8rem;
-        width: 8rem;
-        right: 10% !important;
+        height: 7rem;
+        width: 7rem;
+        right: 15% !important;
+        bottom: 30% !important;
         transform: translate(25%, 15%);
       }
     }
@@ -124,6 +174,18 @@
       transform: translate(-50%, -50%);
       z-index: 3 !important;
       object-fit: contain;
+
+      &:hover {
+        cursor: pointer;
+      }
+      @include respond(tab-land) {
+        height: 20rem;
+        width: 20rem;
+      }
+      @include respond(tab-port) {
+        height: 30rem;
+        width: 30rem;
+      }
       @include respond(phone) {
         width: 90%;
       }
@@ -145,25 +207,61 @@
 }
 
 .Latest_projects {
-  background-color: $color-black;
   position: relative;
-  margin-bottom: 1rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  height: 20vh;
+  @include respond(tab-land) {
+    height: 10vh;
+  }
+  &__col {
+    background-color: $color-black;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  &__column {
+    background-color: $color-black;
+  }
   &__title {
     position: absolute;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     text-transform: uppercase;
     color: $color-white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    @include respond(tab-land) {
+      font-size: 0.8rem;
+      text-align: center;
+      height: 100%;
+    }
   }
 
   &__img {
-    height: 20rem;
+    position: absolute;
+    height: 25rem;
     width: 35rem;
+    @include respond(tab-land) {
+      height: 12.5rem;
+      width: 15rem;
+    }
+  }
+  .img1 {
+    top: -50%;
+    left: 3%;
+  }
+  .img2 {
+    top: -50%;
+    left: 35%;
+  }
+  .img3 {
+    top: -50%;
+    left: 64%;
   }
 }
-.h-20 {
-  height: 20%;
-}
+
 .Team {
   margin: 2rem 0;
 
@@ -306,6 +404,10 @@
 }
 .solutions-image-mobile {
   display: none;
+  @include respond(tab-land) {
+    display: none;
+    margin-bottom: 2rem;
+  }
   @include respond(phone) {
     display: block;
     margin-bottom: 2rem;
@@ -315,8 +417,17 @@
   height: 70vh;
   background: #38394f;
   position: relative;
+
   @include respond(phone) {
     height: 50vh;
+    margin-top: none !important;
+    margin-right: none !important;
+    margin-left: none !important;
+  }
+  @include respond(tab-land) {
+    margin-top: 15rem;
+    margin-right: none !important;
+    margin-left: none !important;
   }
 
   &__img {
@@ -329,6 +440,10 @@
     border-radius: 5px;
     @include respond(phone) {
       display: none;
+      width: 100%;
+    }
+    @include respond(tab-land) {
+      width: 100%;
     }
   }
 

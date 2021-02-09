@@ -11,7 +11,7 @@ const Solution = () => {
         <Row>
           <Col
             sm={{ span: 1 }}
-            md={{ span: 2, offset: 2 }}
+            md={{ span: 10, offset: 2 }}
             lg={{ span: 2, offset: 2 }}
             className='Solution__container '
           >
