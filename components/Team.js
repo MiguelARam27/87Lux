@@ -1,11 +1,22 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-
+import { motion } from 'framer-motion';
+import { useScroll } from './animation/useScroll';
+import { fadeSpring, titleFade } from './animation/teamAnimation';
 const Team = () => {
+  const [element, controls] = useScroll();
   return (
     <>
-      <Container className='Team'>
-        <h1 className='Team__title'>Meet The Team</h1>
+      <motion.div
+        initial='hidden'
+        ref={element}
+        animate={controls}
+        variants={fadeSpring}
+        className='Team container'
+      >
+        <motion.h1 variants={titleFade} className='Team__title'>
+          Meet The Team
+        </motion.h1>
         <img
           src='/assets/team/Team1.png'
           alt='Big commerce'
@@ -41,7 +52,7 @@ const Team = () => {
           alt='Big commerce'
           className='Team__img img7'
         />
-      </Container>
+      </motion.div>
 
       <Container className='Team-mobile'>
         <h1 className='Team-mobile__title'>Meet The Team</h1>
