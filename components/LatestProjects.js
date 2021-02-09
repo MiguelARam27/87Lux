@@ -8,8 +8,13 @@ import {
   Modal,
   Image,
 } from 'react-bootstrap';
-
+import { motion } from 'framer-motion';
 import { useScroll } from './animation/useScroll';
+import {
+  projectTitle,
+  button1Animation,
+  button2Animation,
+} from './animation/projectAnimation';
 const LatestProjects = () => {
   const [element, controls] = useScroll();
 
@@ -33,10 +38,18 @@ const LatestProjects = () => {
   };
   return (
     <Fragment>
-      <Row noGutters={true} className='Projects margin-0' ref={element}>
+      <Row noGutters={true} className='Projects margin-0'>
         <Col sm={{ span: 1 }} md={{ span: 1 }} lg={{ span: 1, offset: 1 }}>
           <div className='Projects__title black'>
-            <h1>Latest Projects</h1>
+            <motion.h1
+              ref={element}
+              initial='hidden'
+              ref={element}
+              animate={controls}
+              variants={projectTitle}
+            >
+              Latest Projects
+            </motion.h1>
           </div>
         </Col>
         <Col
@@ -122,16 +135,28 @@ const LatestProjects = () => {
           </Carousel>
         </Col>
       </Row>
-      <Container className='Project-buttons-container'>
+      <motion.div className='Project-buttons-container container'>
         <Row className='justify-content-center'>
-          <Button href='/' className='Project-buttons-container__button'>
+          <motion.a
+            href='/'
+            variants={button1Animation}
+            initial='hidden'
+            animate={controls}
+            className='Project-buttons-container__button'
+          >
             View Themes
-          </Button>
-          <Button href='/' className='Project-buttons-container__button'>
+          </motion.a>
+          <motion.a
+            href='/'
+            initial='hidden'
+            variants={button2Animation}
+            animate={controls}
+            className='Project-buttons-container__button'
+          >
             View Apps
-          </Button>
+          </motion.a>
         </Row>
-      </Container>
+      </motion.div>
 
       <Modal show={show} onHide={handleClose} centered size='lg'>
         <Modal.Header closeButton>
