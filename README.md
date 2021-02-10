@@ -1,4 +1,4 @@
-# 87Lux Challange
+# 87Lux Challenge
 
 ![](Test.jpg)
 
