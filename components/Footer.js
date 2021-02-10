@@ -3,7 +3,6 @@ import { Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useScroll } from './animation/useScroll';
 import {
-  footerTitleFade,
   footerButtonAnimation,
   footerTitleAnimation,
   footerImageAnimation,
