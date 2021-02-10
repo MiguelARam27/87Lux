@@ -6,9 +6,10 @@ import {
   footerTitleFade,
   footerButtonAnimation,
   footerTitleAnimation,
+  footerImageAnimation,
 } from './animation/footerAnimation';
 const Footer = () => {
-  const [element, controls] = useScroll();
+  const [element, controls] = useScroll(0.35);
   return (
     <motion.div
       ref={element}
@@ -20,7 +21,7 @@ const Footer = () => {
         alt='project'
         className='Footer__img'
         initial='hidden'
-        variants={footerTitleFade}
+        variants={footerImageAnimation}
         animate={controls}
       />
       <Col sm={{ span: 3 }} md={{ span: 3 }} lg={{ span: 3 }}>
