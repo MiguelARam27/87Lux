@@ -1,13 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import {
-  Row,
-  Col,
-  Button,
-  Container,
-  Carousel,
-  Modal,
-  Image,
-} from 'react-bootstrap';
+import { Row, Col, Button, Carousel, Modal, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useScroll } from './animation/useScroll';
 import {

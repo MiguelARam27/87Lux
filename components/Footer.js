@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useScroll } from './animation/useScroll';
 import {
