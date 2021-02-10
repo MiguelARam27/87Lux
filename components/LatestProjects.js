@@ -42,7 +42,6 @@ const LatestProjects = () => {
         <Col sm={{ span: 1 }} md={{ span: 1 }} lg={{ span: 1, offset: 1 }}>
           <div className='Projects__title black'>
             <motion.h1
-              ref={element}
               initial='hidden'
               ref={element}
               animate={controls}

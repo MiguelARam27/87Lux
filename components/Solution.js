@@ -1,14 +1,31 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { colAnimation, footerTitleFade } from './animation/footerAnimation';
+import { useScroll } from './animation/useScroll';
 const Solution = () => {
+  const [element, controls] = useScroll();
   return (
     <>
       <Container fluid className='Solution'>
         <Row className='justify-content-center align-items-center Solution__title-container'>
-          <h1 className='Solution__title '>Need a custom solution?</h1>
+          <motion.h1
+            initial='hidden'
+            variants={footerTitleFade}
+            animate={controls}
+            className='Solution__title '
+          >
+            Need a custom solution?
+          </motion.h1>
         </Row>
 
-        <Row className='Solution__row'>
+        <motion.div
+          className='Solution__row row'
+          initial='hidden'
+          variants={colAnimation}
+          animate={controls}
+          ref={element}
+        >
           <Col
             sm={{ span: 8, offset: 4 }}
             md={{ span: 4, offset: 5 }}
@@ -40,7 +57,7 @@ const Solution = () => {
               <span className='Solution__text'>Marketing Assets</span>
             </div>
           </Col>
-        </Row>
+        </motion.div>
       </Container>
       <Image
         fluid
