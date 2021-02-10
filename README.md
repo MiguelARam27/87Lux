@@ -1,6 +1,54 @@
+# 87Lux Challange
+
+![](Test.jpg)
+
+- [CodingPhase](https://www.youtube.com/watch?v=hPrd67OS0iA) - learn about CodingPhase and his challenge
+
+## Demo
+
+![](87Lux.gif)
+
+## Dependencies
+
+# Sass
+
+Next.js allows you to import Sass using both the .scss and .sass extensions. You can use component-level Sass via CSS Modules and the .module.scss or .module.sass extension.
+
+```bash
+npm install sass
+```
+
+You can see I imported my sass file directly withouth having to compile it to css
+
+```bash
+import '../sass/page.scss';
+```
+
+# Motion
+
+```bash
+npm install framer-motion
+```
+
+I used the motion API for the animations on this project. You can learn more below.
+
+- [Motion API](https://www.framer.com/api/motion/) - learn about motion
+
+# react-intersection-observer
+
+React implementation of the Intersection Observer API to tell you when an element enters or leaves the viewport. Contains both a Hooks, render props and plain children implementation.
+
+- [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer)
+
+```bash
+npm install react-intersection-observer
+```
+
+# Next.js
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting started
 
 First, run the development server:
 
